@@ -5,6 +5,7 @@ var thisNewFirebaseCounter = thisFirebaseCounter.fireBaseCounter;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+
   thisNewFirebaseCounter.getOldCountPromise(function(val){
       console.log(val);
       thisNewFirebaseCounter.increaseCountPromise(val, function (finalMessage){
