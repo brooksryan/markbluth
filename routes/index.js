@@ -1,14 +1,19 @@
 var express = require('express');
 var router = express.Router();
-var counter = require('../services/visitorCounterService');
-var thisCounter = counter.counter;
+var thisFirebaseCounter = require('../services/firebaseCounter');
+var thisNewFirebaseCounter = thisFirebaseCounter.fireBaseCounter;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  thisCounter.incrementCounterUp();
-  thisCounter.logCounter();
-  res.currentCount = thisCounter.count
-  next();
+  thisNewFirebaseCounter.getOldCountPromise(function(val){
+      console.log(val);
+      thisNewFirebaseCounter.increaseCountPromise(val, function (finalMessage){
+        res.currentCount = finalMessage;
+        console.log(finalMessage);
+        next();
+      });
+    }
+  );
 },
 function(req, res, next){
   res.render('index', {
