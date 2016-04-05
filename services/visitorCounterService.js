@@ -1,3 +1,5 @@
+// Deprecated -> now use firebaseCounter.js
+
 var express = require('express');
 var path = require('path');
 
