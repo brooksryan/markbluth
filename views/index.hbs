@@ -8,4 +8,35 @@
     <p>This page has been viewed <b id="count">{{count}}</b> times by his friends, and Mark still doesn't know it exists.</p>
   </div>
 
+  <div class=" row addImageDiv">
+    <label for="file">
+    <div class="button raised">
+          <div class="center" fit>
+          <paper-ripple fit></paper-ripple>
+          </div>
+  </div>
+  </label>
+  <input id="file" type="file" accept="image/*" class="hidden">
+
+
+  </div>
+  <div class=" row addImageDiv">
+    <img id="image" />
+  </div>
+
+
+  <script type="text/javascript">
+    document.getElementById("files").onchange = function () {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+        // get loaded data and render thumbnail.
+        document.getElementById("image").src = e.target.result;
+    };
+
+    // read the image file as a data URL.
+    reader.readAsDataURL(this.files[0]);
+    };
+  </script>
+
 </div>

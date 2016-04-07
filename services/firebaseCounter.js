@@ -34,4 +34,4 @@ fireBaseCounter.prototype.increaseCountPromise = function (val,callback) {
 
 module.exports = {
   fireBaseCounter : new fireBaseCounter()
-}
+};
