@@ -1,3 +1,4 @@
+<!-- header container with image and text -->
 <div class="flex-container">
   <div class="imageDiv flex-item">
       <img src="http://i.imgur.com/U8lHWST.png" class="img-responsive" alt="Responsive image">
@@ -8,25 +9,36 @@
     <p>This page has been viewed <b id="count">{{count}}</b> times by his friends, and Mark still doesn't know it exists.</p>
   </div>
 
+</div>
 
 
-  <form id="myForm">
-
+<div class="flex-container form-container"> <!-- container for image upload and displaying most recent image -->
+  <form id="myForm"> <!-- form container for the inputs and submit TODO: is this necessary? -->
       <div class=" row addImageDiv">
-        <label for="image">
-          <div class="button raised"> this is a button
-            <div class="center" fit>
-              <paper-ripple fit></paper-ripple>
-            </div>
-          </div>
-        </label>
-      <input id="image" type="file" accept="image/*" class="hidden" onchange="upload(this.files[0])">
-    </div>
+      <div class="label-div">   <!-- div for label sizing -->
+          <label for="image"> <!-- replaces the standard input dispaly for a file upload with id: image -->
+            <div class="button raised">
+              <div class="button-text">Upload a picture of mark!
+              </div>
+              <div class="center" fit>
+                <paper-ripple fit></paper-ripple>
+              </div>
+            </div> <!-- end label div -->
+          </label> <!-- end label -->
+        </div>
 
-  </form>
-  <div class="card" z-default=30 z-hover=70>
+      <!-- input for image upload -->
+      <input id="image" type="file" accept="image/*" class="hidden" onchange="upload(this.files[0])">
+      <!-- end of image input -->
+
+    </div> <!-- end of image upload row -->
+
+  </form> <!-- end input form -->
+
+  <div class="mark-image">
+
+      <img id="pictureOfMark" class="most-recent-picture" src="" alt=""/>
 
   </div>
 
-
-</div>
+ </div> <!-- end container for image uload and display -->
