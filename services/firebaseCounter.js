@@ -7,14 +7,27 @@ function fireBaseCounter () {
 
 
 fireBaseCounter.prototype.getOldCountPromise = function(callback){
+
+    // ref.once returns SNAPSHOT object of the values found at the
+    // reference url "ref" and returns the value to a
+    // callback function
     ref.once("value", function(snapshot) {
+
+    //sets var theNewUserCount to equal the value found
+    // at the reference URL at ref
       var theNewUserCount = snapshot.val();
+
+    //logs the success of the function and returns the old object
       console.log('the read has started and the old count is', theNewUserCount);
+
+    //starts the callback function with the object returned from
+    //snapshot.val
       callback(theNewUserCount);
+
+    //Handles errors
     },function (err) {
       callback(err);
     });
-    return Promise;
 };
 
 fireBaseCounter.prototype.increaseCountPromise = function (val,callback) {
@@ -22,11 +35,9 @@ fireBaseCounter.prototype.increaseCountPromise = function (val,callback) {
       var thisOldCount = val.count+1;
       ref.set({count: thisOldCount},function(error){
         if (error) {
-          console.log(error);
-          reject("Error in saving this data increaseCountPromise." + error);
+          callback(error);
         } else {
           console.log('the write has finished happening');
-
           callback(thisOldCount);
         }
       });
@@ -34,4 +45,4 @@ fireBaseCounter.prototype.increaseCountPromise = function (val,callback) {
 
 module.exports = {
   fireBaseCounter : new fireBaseCounter()
-}
+};

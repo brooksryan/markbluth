@@ -3,6 +3,9 @@
   <head>
 
     <title>{{title}}</title>
+
+
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Optional theme -->
@@ -12,12 +15,27 @@
 
     <link rel="stylesheet" href="/stylesheets/socialButtons.css" />
 
+
+    <link rel="import" href="https://www.polymer-project.org/0.5/components/paper-ripple/paper-ripple.html">
+    <!-- <link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
+    <link rel="import" href="http://www.polymer-project.org/components/font-roboto/roboto.html"> -->
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   </head>
   <body>
     {{{body}}}
   </body>
   <footer>
+    <!-- Firebase require -->
     <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+
+    <!--  JS for material desgin cards -->
+    <script src="/javascripts/materialDesignCard.js" charset="utf-8"></script>
+
+    <!--  Javascript for index.js-->
     <script src="/javascripts/index.js" charset="utf-8"></script>
+
   </footer>
 </html>
