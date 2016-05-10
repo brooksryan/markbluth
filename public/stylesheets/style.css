@@ -1,3 +1,17 @@
+/*container for body of document, centering it at 900px using
+flexbox*/
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.flexbox-body-child {
+  max-width: 856px;
+}
+
+/*stuff inside the flexbox*/
 .flex-container{
   flex-wrap: wrap;
   display: -webkit-box;
@@ -23,11 +37,6 @@
 .contentDiv{
   max-width: 700px;
   padding-left: 60px;
-}
-
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -250,4 +259,62 @@ div.button-text{
   font-size: 2em;
 }
 
+}
+
+@media only screen and (max-device-width: 736px)
+    and (-webkit-device-pixel-ratio: 2.6) {
+
+    .flex-container.form-container {
+      flex-direction: column;
+    }
+
+    .img-responsive{
+      max-height: 500px;
+      max-width: 500px;
+    }
+
+    img {
+    float: left;
+    width:600px;
+    height: 600px;
+    padding-left:0
+    }
+
+    /*end image formatting*/
+
+    /* paragraph formatting */
+
+    h1 {
+      text-align: center;
+      font-size: 90px;
+    }
+
+    p {
+
+      font-size: 50px;
+    }
+
+    .label-div{
+      flex-grow: 3;
+      width: 100%;
+    }
+
+    img.most-recent-picture {
+      max-width: 100%;
+      max-height: none;
+      height: auto;
+      padding-top: 30px
+    }
+
+    /*button formatting*/
+
+    div.button.raised{
+      height: 100px;
+      width: 400px;
+    }
+
+    div.button-text{
+      line-height: 45px;
+      font-size: 2em;
+    }
 }
