@@ -4,6 +4,7 @@ var ref = new Firebase("https://markbluth.firebaseio.com/visitors/count");
 //establishes a connection to firebase "images"
 var imageLinkRef = new Firebase("https://markbluth.firebaseio.com/images");
 
+var waitingImage = "https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"
 //when the data at the firebase link location changes
 //change the value of the "count" element in the HTML
 //keeping this number as the most updated and live changes
@@ -34,6 +35,7 @@ function upload (file) {
     //logs the state change when returned by
     //ajax request
     httpRequest.onreadystatechange = function(){
+        replaceCurrentImage(waitingImage)
         console.log(httpRequest.readyState);
     };
 
