@@ -28,14 +28,19 @@
     {{{body}}}
   </body>
   <footer>
-    <!-- Firebase require -->
-    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+
+
+    <!-- pollyfill cache script-->
+    <script src="/javascripts/serviceworker-cache-polyfill.js" charset="utf-8"></script>
 
     <!--  JS for material desgin cards -->
     <script src="/javascripts/materialDesignCard.js" charset="utf-8"></script>
 
-    <!--  Javascript for index.js-->
-    <script src="/javascripts/index.js" charset="utf-8"></script>
+    <!--  Javascript for registering notifications service worker-->
+    <script src="/javascripts/serviceWorkerRegistration.js" charset="utf-8"></script>
+
+    <!--  Javascript for notifications service worker-->
+    <script src="/javascripts/sw.js" charset="utf-8"></script>
 
   </footer>
 </html>
