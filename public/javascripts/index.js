@@ -15,6 +15,10 @@ ref.on("value", function(snapshot){
 });
 
 //file upload function
+/**
+ * @param  {file} imageFile - image file to be uplaoded
+ * @return {[type]}
+ */
 function upload (file) {
 
     //instantiates new form data to hand the request
