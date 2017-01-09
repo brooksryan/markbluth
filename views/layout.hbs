@@ -4,16 +4,8 @@
 
     <title>{{title}}</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    {{!-- MUI stuff --}}
-    <link href="//cdn.muicss.com/mui-0.9.7/css/mui.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- Latest compiled and minified CSS for Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
@@ -37,20 +29,10 @@
 
   <body>
 
-    <div class="mui-container">
-      <table width="100%">
-        <tr class="mui--appbar-height">
-          <td class="mui--text-title">Brand.io</td>
-          <td align="right">
-            <ul class="mui-list--inline mui--text-body2">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Login</a></li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-    </div>
+    <ul class="nav nav-tabs">
+      <li role="presentation"> <a href="/">Home</a></li>
+      <li role="presentation"> <a href="/gallery">Gallery</a></li>
+    </ul>
 
   {{{body}}}
 
@@ -76,10 +58,6 @@
     <!--  Javascript for notifications service worker-->
     <script src="/javascripts/sw.js" charset="utf-8"></script>
 
-    {{!--  material design stuff  --}}
-    <script src="//cdn.muicss.com/mui-0.9.7/js/mui.min.js"></script>
-
-    {{!-- adds selector to active menu item --}}
     <script>
 
     var url = window.location;
