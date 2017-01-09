@@ -1,3 +1,18 @@
-.navbar {
-  margin-bottom: 0px;
+@media only screen and (max-device-width: 667px)
+    and (-webkit-device-pixel-ratio: 2) {
+
+.nav-tabs {
+	font-size: 40px;
+}
+
+}
+
+
+@media only screen and (max-device-width: 736px)
+    and (-webkit-device-pixel-ratio: 2.6) {
+
+.nav-tabs {
+	font-size: 40px;
+}
+
 }
